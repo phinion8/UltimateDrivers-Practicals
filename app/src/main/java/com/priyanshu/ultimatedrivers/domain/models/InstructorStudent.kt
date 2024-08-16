@@ -1,6 +1,13 @@
 package com.priyanshu.ultimatedrivers.domain.models
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import com.priyanshu.ultimatedrivers.utils.Constants
+
+@Entity(tableName = Constants.INSTRUCTOR_STUDENT_TABLE_NAME)
 data class InstructorStudent(
+    @PrimaryKey(autoGenerate = true)
+    val localId: Int,
     val Addons: String,
     val AdvanceAvailable: String,
     val BalanceAmount: String,

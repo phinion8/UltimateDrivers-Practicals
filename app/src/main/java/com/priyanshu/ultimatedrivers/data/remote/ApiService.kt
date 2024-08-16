@@ -10,8 +10,8 @@ import retrofit2.http.POST
 interface ApiService {
 
     @POST("api/InstructorStudentList")
-    fun getInstructorStudentList(
-        @Header("HashToken") hasToken: String,
+    suspend fun getInstructorStudentList(
+        @Header("HashToken") hashToken: String,
         @Body studentInfoRequest: StudentInfoRequest
     ): StudentInfo
 
